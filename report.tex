@@ -6,6 +6,7 @@
 \usepackage{ascmac}
 \usepackage{listings}
 \usepackage{underscore}
+\usepackage{subfig}
 \lstset{
     frame=single,
     numbers=left,
@@ -222,8 +223,144 @@ $ PC_1, PC_2, PC_3, PC_5, PC_6, PC_7$
 ($ F(6, 242) = 118 $)
 
 \subsubsection{主成分を構成する質問・主成分命名}
-\subsubsection{グループの類推}
+PV16の主成分を構成する質問の選出には、各質問に対応した主成分負荷量のみを対象とした。
+これは、主成分得点は全ての生データそのものに対応しており、質問を選出するのが困難だったためである。
 
+以下の表が、各主成分に対して主成分負荷量の絶対値が最も大きかった5つの質問とその負荷量を表している。
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{各主成分に対する主成分負荷量絶対値TOP5}
+    \subfloat[PC1]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q14 & 0.801 \\
+        Q17 & 0.756 \\
+        Q3 & 0.727 \\
+        Q10 & 0.724  \\
+        Q6 & 0.721 \\
+        \hline
+      \end{tabular}
+    }
+    \subfloat[PC2]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q1 & 0.604 \\
+        Q7 & 0.548 \\
+        Q2 & 0.418 \\
+        Q11 & 0.414 \\
+        Q4 & 0.402 \\
+        \hline
+      \end{tabular}
+    }
+    \subfloat[PC3]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q16 & 0.502 \\
+        Q12 & 0.478 \\
+        Q9 & 0.404 \\
+        Q5 & 0.347 \\
+        Q10 & 0.345 \\
+        \hline
+      \end{tabular}
+    }
+    \vspace{1cm}
+    \subfloat[PC5]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q7 & 0.366 \\
+        Q15 & 0.328 \\
+        Q11 & 0.319 \\
+        Q17 & 0.299 \\
+        Q9 & 0.295 \\
+        \hline
+      \end{tabular}
+    }
+    \subfloat[PC6]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q8 & 0.568 \\
+        Q5 & 0.438 \\
+        Q4 & 0.353 \\
+        Q6 & 0.338 \\
+        Q15 & 0.194 \\
+        \hline
+      \end{tabular}
+    }
+    \subfloat[PC7]{
+      \begin{tabular}{c|c}
+        \hline
+        質問番号 & 主成分負荷量 \\ \hline \hline
+        Q18 & 0.609 \\
+        Q5 & 0.250 \\
+        Q4 & 0.221 \\
+        Q6 & 0.211 \\
+        Q15 & 0.207 \\
+        \hline
+      \end{tabular}
+    }
+  \end{center}
+\end{table}
+
+このデータを元に、各主成分に命名した一覧は以下の通りである。
+
+\begin{description}
+  \item[PC1] {\bf 好感度}
+  \begin{itemize}
+    \item 各要素に対する好感度を問うた質問が主成分負荷量絶対値の上位を独占したため
+    \item 好感度を問うた質問同士の主成分負荷量絶対値の差があまりなかったため
+  \end{itemize}
+
+  \item[PC2] {\bf 映像洗練性}
+  \begin{itemize}
+    \item 雰囲気・映像に対する洗練性を問うた質問が主成分負荷量絶対値の上位2つであったため
+    \item その2問の主成分負荷量絶対値が以下の質問に対して差をあけていたため
+  \end{itemize}
+
+  \item[PC3] {\bf 聴きやすさ}
+  \begin{itemize}
+    \item 歌詞の分かりやすさ・メロディの聞き取りやすさが主成分負荷量絶対値の上位2つであったため
+    \item その2問の主成分負荷量絶対値が以下の質問に対して差をあけていたため
+  \end{itemize}
+
+  \item[PC5] {\bf 楽曲洗練性}
+  \begin{itemize}
+    \item 楽曲の歌詞・メロディに対する洗練性を問うた質問が上位に入っていたため
+    \item なお、歌詞・メロディのみならず、PC2で採用された映像に対する洗練性を問うた質問も上位に入っていた
+  \end{itemize}
+
+  \item[PC6] {\bf 映像に対するアーティストの親和性}
+  \begin{itemize}
+    \item アーティストの親和性と映像の見やすさを問うた質問が上位2つを占めたため
+    \item その2問の主成分負荷量絶対値が以下の質問に対して差をあけていたため
+  \end{itemize}
+
+  \item[PC7] {\bf 印象度}
+  \begin{itemize}
+    \item PVの印象度を問うた質問が、他の質問の主成分負荷量絶対値に対して大差をつけて最上位となっていたため
+  \end{itemize}
+\end{description}
+
+\subsubsection{グループの類推}
+調査結果に対して、クラスタ解析を行った結果が以下の図\ref{fig:clusterPV}の通りである。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=10cm]{clusterPV.bmp}
+    \caption{PV16調査結果に対するクラスタ分析結果}
+    \label{fig:clusterPV}
+  \end{center}
+\end{figure}
+目的変数Q20に最も近い位置の質問がQ14となった。
+そのQ14は、PC1における主成分負荷量絶対値が最大だった質問でもあった。
+また、図左部分に各要素の洗練性を問うた質問が集中している他、
+各主成分を構成していた質問が近い関係にある場合が多かった。
+なお、PC7を構成していたPVの印象度を問うたQ18に最も近かったのは、
+メロディの聴きやすさを問うたQ12であった。
 
 \section{結論}
 \section{考察}
