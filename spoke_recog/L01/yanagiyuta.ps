@@ -1,6 +1,6 @@
 %!PS-Adobe-2.0
 %%Title: yanagiyuta.ps
-%%Creator: gnuplot 4.2 patchlevel 6 
+%%Creator: gnuplot 4.2 patchlevel 6
 %%CreationDate: Tue Nov  7 13:33:23 2017
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
@@ -67,11 +67,11 @@ end
 /f {rlineto fill} bind def
 /vpt2 vpt 2 mul def
 /hpt2 hpt 2 mul def
-/Lshow {currentpoint stroke M 0 vshift R 
+/Lshow {currentpoint stroke M 0 vshift R
 	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
 /Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
 	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
-/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R
 	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
 /UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
   /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
@@ -272,7 +272,7 @@ end
 /PentE {stroke [] 0 setdash gsave
   translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
   closepath stroke grestore} def
-/CircE {stroke [] 0 setdash 
+/CircE {stroke [] 0 setdash
   hpt 0 360 arc stroke} def
 /Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
 /DiaW {stroke [] 0 setdash vpt add M
@@ -292,7 +292,7 @@ end
 /PentW {stroke [] 0 setdash gsave
   translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
   Opaque stroke grestore} def
-/CircW {stroke [] 0 setdash 
+/CircW {stroke [] 0 setdash
   hpt 0 360 arc Opaque stroke} def
 /BoxFill {gsave Rec 1 setgray fill grestore} def
 /Density {
@@ -343,7 +343,7 @@ end
 	bind def
 /KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
 << Tile8x8
- /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke}
 >> matrix makepattern
 /Pat1 exch def
 << Tile8x8
@@ -38647,7 +38647,7 @@ gsave % colour palette begin
 /HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
   { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
      /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
-	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def
 	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
 	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
 	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
@@ -38681,7 +38681,7 @@ Color InterpolatedColor or { % COLOUR vs. GRAY map
     /g {stroke pm3dround /grayv exch def interpolate
         SelectSpace setrgbcolor} bind def
   }{
-  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain
        SelectSpace setrgbcolor} bind def
   } ifelse
 }{
@@ -45706,7 +45706,7 @@ gsave % colour palette begin
 /HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
   { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
      /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
-	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def
 	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
 	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
 	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
@@ -45740,7 +45740,7 @@ Color InterpolatedColor or { % COLOUR vs. GRAY map
     /g {stroke pm3dround /grayv exch def interpolate
         SelectSpace setrgbcolor} bind def
   }{
-  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain
        SelectSpace setrgbcolor} bind def
   } ifelse
 }{
