@@ -50,6 +50,8 @@
 
 \section{HMMの学習曲線}
 
+[go]に対して行ったHMMの学習曲線は、以下の図\ref{fig:ps}の通りである。
+
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=13.0cm]{learningCurve.ps}
@@ -61,7 +63,7 @@
 \section{単語認識性能評価}
 \subsection{自分の声}
 \begin{lstlisting}[language=c, caption=\texttt{countCorr}実行結果]
-\% countCorr
+$ countCorr
 (中略)
 rei, 0
 ichi, 0
@@ -77,7 +79,7 @@ kyuu, 0
 
 \subsection{他人の声}
 \begin{lstlisting}[language=c, caption=\texttt{countXCorr}実行結果]
-\% countXCorr m0
+$ countXCorr m0
 Evaluation start.  Wait a moment.
 rei, 0
 ichi, 0
@@ -90,7 +92,7 @@ nana, 44
 hachi, 0
 kyuu, 0
 
-\% countXCorr m1
+$ countXCorr m1
 Evaluation start.  Wait a moment.
 rei, 0
 ichi, 0
@@ -103,7 +105,7 @@ nana, 30
 hachi, 0
 kyuu, 0
 
-\% countXCorr m2
+$ countXCorr m2
 Evaluation start.  Wait a moment.
 rei, 0
 ichi, 0
@@ -116,7 +118,7 @@ nana, 45
 hachi, 0
 kyuu, 0
 
-\% countXCorr f1
+$ countXCorr f1
 Evaluation start.  Wait a moment.
 rei, 0
 ichi, 0
@@ -135,8 +137,8 @@ kyuu, 0
 \subsection{自分の声}
 3, 4, 5, 7をそれぞれ３回ずつ発声し、結果を得た。
 \begin{lstlisting}[language=c, caption=\texttt{recog}実行結果]
-\% #saN (spoken by myself)
-\% recog -20 lib/HMMList
+$ #saN (spoken by myself)
+$ recog -20 lib/HMMList
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10221.wav
@@ -148,7 +150,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -1981.794753
  4. ５ (go)= -2125.044269
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10454.wav
@@ -160,7 +162,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -1113.365923
  4. ５ (go)= -1180.399190
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10491.wav
@@ -172,10 +174,10 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -2526.148038
  4. ５ (go)= -2698.040703
 
-ハングアップ   
+ハングアップ
 
-\% #yoN (spoken by myself)
-\% recog -20 lib/HMMList
+$ #yoN (spoken by myself)
+$ recog -20 lib/HMMList
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10277.wav
@@ -187,7 +189,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1825.196272
  4. ５ (go)= -1979.401992
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/11351.wav
@@ -199,7 +201,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1758.778353
  4. ５ (go)= -1842.883630
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/11384.wav
@@ -211,9 +213,9 @@ rank word (kana)= log-likelyhood
  3. ７ (nana)= -1679.459238
  4. ５ (go)= -1708.053267
 
-ハングアップ  
-\% #go (spoken by myself)
-\% recog -20 lib/HMMList
+ハングアップ
+$ #go (spoken by myself)
+$ recog -20 lib/HMMList
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10115.wav
@@ -225,7 +227,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1556.722549
  4. ４ (yoN)= -1663.274652
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/12073.wav
@@ -237,7 +239,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1550.040932
  4. ４ (yoN)= -1623.344431
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/12121.wav
@@ -249,10 +251,10 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1526.620053
  4. ４ (yoN)= -1610.494881
 
-ハングアップ   
+ハングアップ
 
-\% #nana (spoken by myself)
-\% recog -20 lib/HMMList
+$ #nana (spoken by myself)
+$ recog -20 lib/HMMList
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/10306.wav
@@ -264,7 +266,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -1621.792248
  4. ５ (go)= -1777.863372
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/12208.wav
@@ -276,7 +278,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -1942.985780
  4. ５ (go)= -2001.167651
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/12236.wav
@@ -288,7 +290,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -2071.052025
  4. ５ (go)= -2194.124920
 
-ハングアップ   
+ハングアップ
 \end{lstlisting}
 
 \subsection{他人の声}
@@ -306,7 +308,7 @@ rank word (kana)= log-likelyhood
  3. ５ (go)= -1748.309120
  4. ４ (yoN)= -1753.374475
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/39885.wav
@@ -318,7 +320,7 @@ rank word (kana)= log-likelyhood
  3. ７ (nana)= -1455.075794
  4. ３ (saN)= -1500.914987
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/39936.wav
@@ -330,7 +332,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -1208.448915
  4. ５ (go)= -1232.254232
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/39971.wav
@@ -342,7 +344,7 @@ rank word (kana)= log-likelyhood
  3. ３ (saN)= -943.252832
  4. ５ (go)= -970.624385
 
-ハングアップ   
+ハングアップ
 \end{lstlisting}
 
 \subsubsection{浅津氏の場合}
@@ -359,7 +361,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -2085.992983
  4. ５ (go)= -2102.686864
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/44962.wav
@@ -371,7 +373,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -1051.388855
  4. ５ (go)= -1086.196301
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/45027.wav
@@ -383,7 +385,7 @@ rank word (kana)= log-likelyhood
  3. ４ (yoN)= -994.104035
  4. ５ (go)= -1012.153328
 
-ハングアップ   
+ハングアップ
 Returnキーを押してください
 Isolated Word Recogition On-The-Fly
 vad_file= vadwav/45062.wav
@@ -395,7 +397,7 @@ rank word (kana)= log-likelyhood
  3. ５ (go)= -1033.311989
  4. ４ (yoN)= -1044.670763
 
-ハングアップ   
+ハングアップ
 \end{lstlisting}
 
 \subsection{考察}
